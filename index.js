@@ -3,14 +3,26 @@
 
 // 完成下面程序，将`name`变量中的字母全部转为为大写，输出：`'HELLO'`。
 var name = 'hello';
-// TODO write your code here...
+name=name.toUpperCase();
+console.log(name);
 
 
 // 完成下面程序，将sentence变量中的所有单词首字母变为大写，输出：'Good Afternoon, Mr Mike.'。
 var sentence = 'good afternoon, mr mike.';
-//TODO write your code here...
+var arr = sentence.split(" ");
+sentence='';
+arr.forEach(i=>{
+  i=i.substring(0,1).toUpperCase()+i.substring(1).toLowerCase();
+  if(sentence.length>0){
+    sentence=sentence+" "+i;
+  }else{
+    sentence=i;
+  }
+});
+console.log(sentence);
 
 
 // 完成下面程序，将money变量中的金额提取出来，输出：20。
 var money = '￥20';
-//TODO write your code here...
+var num=money.replace("￥","");
+console.log(num);
